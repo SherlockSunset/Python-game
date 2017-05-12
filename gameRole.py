@@ -1,18 +1,9 @@
 # -*- coding: utf-8 -*-
 
-
-#Class- def methods, methods must contain parameter:self, and must be the first one.
-
-#can call attributes by class name
-
 import pygame
 
 SCREEN_WIDTH = 480
 SCREEN_HEIGHT = 800
-
-TYPE_SMALL = 1
-TYPE_MIDDLE = 2
-TYPE_BIG = 3
 
 # Bullet class
 class Bullet(pygame.sprite.Sprite):   #pygame.sprite.Sprite: Simple base class for visible game objects 
@@ -35,10 +26,10 @@ class Player(pygame.sprite.Sprite):
             #self.image.append(plane_img.subsurface(player_rect[i]).convert_alpha())
             self.image.append(plane_img.subsurface(player_rect[i]))
         self.rect = player_rect[0]                      # Initialize the picture
-        self.rect.topleft = init_pos                    # the topleft of self.rect is at init_pos
+        self.rect.topleft = init_pos                    # attributes: the topleft of self.rect is at init_pos
         self.speed = 10                                  # Initialize the speed of the player
         self.bullets = pygame.sprite.Group()            # set of bullets
-        self.img_index = 0                              # index of player
+        self.img_index = 0                              # index of images
         self.is_hit = False                             # player is dead or not
 
     def shoot(self, bullet_img):
