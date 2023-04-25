@@ -1,2 +1,2 @@
 # Python-game
-First time I implemented a game using Python
+Simple star war game developed by python.
